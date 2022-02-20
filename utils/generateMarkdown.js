@@ -7,6 +7,13 @@ const renderLicenseBadge = license => {
   return `![Github licence](http://img.shields.io/badge/license-${license}-blue.svg)`;
 };
 
+const renderLicenseContent = license => {
+  if (!license) {
+    return '';
+  }
+  return `* [License](#license)`;
+};
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 const renderLicenseSection = license => {
@@ -28,8 +35,7 @@ const { title, description, license, ...data} = generateMarkdown;
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [License](#license)
-  * [Contributing](#contributing)
+  ${renderLicenseContent(license)}  
   * [Tests](#tests)
   * [Questions](#questions)
   
