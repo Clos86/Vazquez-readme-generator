@@ -1,22 +1,19 @@
-# ksdfj
-  ![Github licence](http://img.shields.io/badge/license-Apache-2.0-blue.svg)  
+# README Generator
+    
   ## Description 
-  fjslkd
+  It creates a readme file by prompting the user with questions about thier project.
   ## Table of Contents
   * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)  
+  * [Usage](#usage) 
   * [Tests](#tests)
   * [Questions](#questions)
   
   ## Installation 
-  sdkfj
+  Clone from the repository
   ## Usage 
-  slkdf
+  Using node.js you will run the app and answer the questions.
   
-  ## License 
-  This project is license under [Apache-2.0](https://choosealicense.com/licenses/Apache-2.0/)
   ## Tests
-  fjlskd
+  node
   ## Questions
-  If you have any questions about this projects, please contact me directly at [fjslkd](mailto:fjslkd). You can view more of my projects at [skdf](https://github.com/skdf).
+  If you have any questions about this projects, please contact me directly at [c.vazquez1986@gmail.com](mailto:c.vazquez1986@gmail.com). You can view more of my projects at [Clos86](https://github.com/Clos86).
