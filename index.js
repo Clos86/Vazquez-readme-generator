@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generatePage = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -31,15 +32,21 @@ const questions = () => {
                 return false; 
             }
         }
-    }, 
+    },
+    {
+        type: 'confirm',
+        name: 'confirmLicense',
+        message: 'Would you like to enter a license for the project?',
+        default: true
+      },
     {
         type: 'list',
         name: 'license',
         message: 'What kind of license should your project have?',
         choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'ISC'],        
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
+        when: ({ confirmLicense }) => {
+            if (confirmLicense) {
+              return true;
             } else {
                 console.log('Please choose a license!');
                 return false; 
