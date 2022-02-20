@@ -30,7 +30,7 @@ const generateMarkdown = data => {
   ## Usage 
   ${data.usage}
   ## License 
-  This project is license under ${data.license}
+  This project is license under [${data.license}](https://choosealicense.com/licenses/${data.license}/)
   ## Contributing 
   ${data.contributors}
   ## Tests

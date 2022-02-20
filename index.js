@@ -43,7 +43,7 @@ const questions = () => {
         type: 'list',
         name: 'license',
         message: 'What kind of license should your project have?',
-        choices: ['Apache_License_2.0', 'GNU_GPLv3', 'MIT', 'ISC'],        
+        choices: ['Apache-2.0', 'GPL-3.0', 'MIT', 'ISC'],        
         when: ({ confirmLicense }) => {
             if (confirmLicense) {
               return true;
