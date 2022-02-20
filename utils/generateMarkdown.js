@@ -1,22 +1,30 @@
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
-// function renderLicenseBadge(license) {}
+// TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
+const renderLicenseBadge = license => {
+  if (!license) {
+    return '';
+  }
+  return `![Github licence](http://img.shields.io/badge/license-${license}-blue.svg)`;
+};
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
-
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+const renderLicenseSection = license => {
+  if (!license) {
+    return '';
+  }
+  return `
+  ## License 
+  This project is license under [${license}](https://choosealicense.com/licenses/${license}/)`;
+};
 
 // TODO: Create a function to generate markdown for README
-const generateMarkdown = data => {
-  return `# ${data.title}
-  ![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
-  
+module.exports = generateMarkdown => {
+const { title, description, license, ...data} = generateMarkdown;
+  return `# ${title}
+  ${renderLicenseBadge(license)}  
   ## Description 
-  ${data.description}
+  ${description}
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -29,10 +37,7 @@ const generateMarkdown = data => {
   ${data.install}
   ## Usage 
   ${data.usage}
-  ## License 
-  This project is license under [${data.license}](https://choosealicense.com/licenses/${data.license}/)
-  ## Contributing 
-  ${data.contributors}
+  ${renderLicenseSection(license)}
   ## Tests
   ${data.test}
   ## Questions
@@ -40,4 +45,4 @@ const generateMarkdown = data => {
 `;
 }
 
-module.exports = generateMarkdown;
+;

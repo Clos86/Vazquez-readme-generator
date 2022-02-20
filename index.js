@@ -47,8 +47,7 @@ const questions = () => {
         when: ({ confirmLicense }) => {
             if (confirmLicense) {
               return true;
-            } else {
-                console.log('Please choose a license!');
+            } else {                
                 return false; 
             }
         }
