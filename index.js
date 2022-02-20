@@ -43,7 +43,7 @@ const questions = () => {
         type: 'list',
         name: 'license',
         message: 'What kind of license should your project have?',
-        choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'ISC'],        
+        choices: ['Apache_License_2.0', 'GNU_GPLv3', 'MIT', 'ISC'],        
         when: ({ confirmLicense }) => {
             if (confirmLicense) {
               return true;
@@ -112,7 +112,6 @@ const questions = () => {
     },
 ]);
 };
-questions();
 
 // TODO: Create a function to write README file
 const writeFile = data => {
@@ -128,8 +127,17 @@ const writeFile = data => {
     })
 };
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+// function call to initialize program
+questions()
+// getting user answers 
+.then(answers => {
+    return generatePage(answers);
+})
+// using data to display on page 
+.then(data => {
+    return writeFile(data);
+})
+// catching errors 
+.catch(err => {
+    console.log(err)
+})
