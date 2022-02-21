@@ -15,4 +15,5 @@
   Google drive link to see how it works: [link](https://drive.google.com/file/d/1gef8zoK_zDXlTQzusk6SnymQBEeNpvEq/view?usp=sharing)
   
   ## Questions
-  If you have any questions about this projects, please contact me directly at [c.vazquez1986@gmail.com](mailto:c.vazquez1986@gmail.com). You can view more of my projects at [Clos86](https://github.com/Clos86).
+  If you have any questions about this projects, please contact me directly at [c.vazquez1986@gmail.com](mailto:c.vazquez1986@gmail.com).  
+  You can view more of my projects at [Clos86](https://github.com/Clos86).
